@@ -1,17 +1,18 @@
 <div class="panel panel-default center-block">
-	<div class="panel-heading"><img class="logo recipe-book" alt="logo"></div>
-		<form class="panel-body" #loginForm="ngForm">
-			<input type="text" placeholder="Email" name="correo" required email ngModel #correo="ngModel">
-      <div class="text-danger" *ngIf="correo.invalid && correo.touched">
-				<span *ngIf="correo.errors.required">* Se requiere un correo</span>
-				<span *ngIf="correo.errors.email">* Debe tener formato de correo</span>
-			</div>
-      <input type="password" placeholder="Contraseña" name="contrasena" required ngModel #contrasena="ngModel">
-      <span class="text-danger" *ngIf="contrasena.invalid && contrasena.touched && contrasena.errors.required">
-            * Se requiere una contraseña
-      </span>
-			<button type="button" class="btn btn-primary"
-        [disabled]="loginForm.invalid" (click)="login()">Ingresar</button>
-      <span class="text-danger" *ngIf="showAccessError">* Usuario y/o contraseña inválidos</span>
-		</form> 
+	<div class="panel-heading">
+		<span class="glyphicon glyphicon-envelope"></span>
 	</div>
+	<form class="panel-body" #loginForm="ngForm">
+		<input type="text" placeholder="Email" name="correo" required email ngModel #correo="ngModel">
+		<div class="text-danger" *ngIf="correo.invalid && correo.touched">
+			<span *ngIf="correo.errors.required">* Se requiere un correo</span>
+			<span *ngIf="correo.errors.email">* Debe tener formato de correo</span>
+		</div>
+		<input type="password" placeholder="Contraseña" name="contrasena" required ngModel #contrasena="ngModel">
+		<span class="text-danger" *ngIf="contrasena.invalid && contrasena.touched && contrasena.errors.required">
+			* Se requiere una contraseña
+		</span>
+		<button type="button" class="btn btn-primary" [disabled]="loginForm.invalid" (click)="login()">Ingresar</button>
+		<span class="text-danger" *ngIf="showAccessError">* Usuario y/o contraseña inválidos</span>
+	</form>
+</div>

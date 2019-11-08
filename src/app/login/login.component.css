@@ -14,8 +14,6 @@ button {
 .logo{
   display:block; 
   margin: auto;
-  width: 70%;
-}
-.recipe-book{
-  content:url(https://cdn2.iconfinder.com/data/icons/rounded_square_icons__books_by_deleket-dexzmr/320/Recipe_Book.png); 
+  width: 70%;  
+  content:url(http://cdn2.iconfinder.com/data/icons/rounded_square_icons__books_by_deleket-dexzmr/320/Recipe_Book.png); 
 }

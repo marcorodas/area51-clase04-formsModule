@@ -14,11 +14,21 @@ export class LoginComponent {
 
   constructor(private usuarioService: UsuarioService) {}
 
+  onEnterCorreo(contrasenaElem) {
+    contrasenaElem.focus();
+  }
+
+  onEnterContrasena(btnIngresarElem) {
+    if (this.loginForm.valid) {
+      btnIngresarElem.click();
+    }
+  }
+
   login() {
     let logginSuccess = this.usuarioService.loginSuccess(this.loginForm.value);
     if (logginSuccess) {
       this.loginEmitter.emit();
-      return; 
+      return;
     }
     this.showAccessError = true;
   }

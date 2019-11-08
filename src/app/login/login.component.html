@@ -3,22 +3,22 @@
 		<img class="logo">
 	</div>
 		<form class="panel-body" #loginForm="ngForm">
-			<div class="form-elem">
+			<div class="form-field">
 				<i class="fa fa-envelope"></i>
-				<input type="text" placeholder="Email" name="correo" required email ngModel #correo="ngModel">
+				<input type="text" placeholder="Email" name="correo" required email ngModel #correo="ngModel" (keyup.enter)="onEnterCorreo(contrasenaElem)" autofocus>
         <div class="text-danger" *ngIf="correo.invalid && correo.touched">
 					<span *ngIf="correo.errors.required">* Se requiere un correo</span>
 					<span *ngIf="correo.errors.email">* Debe tener formato de correo</span>
 				</div>
-      </div>		        
-				<div class="form-elem">
+      </div>
+				<div class="form-field">
           <i class="fa fa-key"></i>
-					<input type="password" placeholder="Contraseña" name="contrasena" required ngModel #contrasena="ngModel">
+					<input type="password" placeholder="Contraseña" name="contrasena" required ngModel #contrasenaElem #contrasena="ngModel" (keyup.enter)="onEnterContrasena(btnIngresar)">
           <span class="text-danger" *ngIf="contrasena.invalid && contrasena.touched && contrasena.errors.required">
         * Se requiere una contraseña
         </span>
-        </div>					
-				<button type="button" class="btn btn-primary form-elem" [disabled]="loginForm.invalid" (click)="login()">Ingresar</button>
+        </div>
+				<button type="button" class="btn btn-primary" [disabled]="loginForm.invalid" (click)="login() " #btnIngresar>Ingresar</button>
 				<span class="text-danger" *ngIf="showAccessError">* Usuario y/o contraseña inválidos</span>
 		</form>
 	</div>

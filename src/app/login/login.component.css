@@ -4,22 +4,25 @@ form {
   width: 330px;
   margin: auto;
 }
-.form-elem{
+.form-field{
   position: relative;
 }
-.form-elem .glyphicon, .form-elem .fa{
+.form-field .glyphicon, .form-field .fa{
   position: absolute;
   padding: 10px 0px 0px 10px;
   pointer-events: none;
 }
-.form-elem input {
+.form-field input {
 	padding: 5px 5px;
   width: 100%;  
 }
-.form-elem>.glyphicon+input, .form-elem>.fa+input{
+.form-field>.glyphicon+input, .form-field>.fa+input{
   padding-left: 30px;
 }
-.form-elem ~ .form-elem{
+.form-field ~ .form-field{
+  margin-top: 5px;
+}
+.form-field+button {
   margin-top: 5px;
 }
 img.logo{

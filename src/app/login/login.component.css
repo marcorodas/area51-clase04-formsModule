@@ -4,16 +4,27 @@ form {
   width: 330px;
   margin: auto;
 }
-input {
+.form-elem{
+  position: relative;
+}
+.form-elem .glyphicon, .form-elem .fa{
+  position: absolute;
+  padding: 10px 0px 0px 10px;
+  pointer-events: none;
+}
+.form-elem input {
 	padding: 5px 5px;
+  width: 100%;  
+}
+.form-elem>.glyphicon+input, .form-elem>.fa+input{
+  padding-left: 30px;
+}
+.form-elem ~ .form-elem{
   margin-top: 5px;
 }
-button {
-  margin-top: 5px;
-}
-.logo{
+img.logo{
   display:block; 
   margin: auto;
   width: 70%;  
-  content:url(http://cdn2.iconfinder.com/data/icons/rounded_square_icons__books_by_deleket-dexzmr/320/Recipe_Book.png); 
+  content:url(//cdn2.iconfinder.com/data/icons/rounded_square_icons__books_by_deleket-dexzmr/320/Recipe_Book.png); 
 }

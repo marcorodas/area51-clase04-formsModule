@@ -1,5 +1,6 @@
-import { Component, ViewChild } from "@angular/core";
+import { Component, ViewChild, Output, EventEmitter } from "@angular/core";
 import { NgForm } from "@angular/forms";
+import { UsuarioService } from "./../usuario.service";
 
 @Component({
   selector: "app-login",
@@ -8,9 +9,17 @@ import { NgForm } from "@angular/forms";
 })
 export class LoginComponent {
   @ViewChild("loginForm", { static: true }) loginForm: NgForm;
+  @Output() loginEmitter = new EventEmitter();
+  showAccessError: boolean = false;
+
+  constructor(private usuarioService: UsuarioService) {}
 
   login() {
-    console.log(this.loginForm.value);
-    this.loginForm.reset();
+    let logginSuccess = this.usuarioService.loginSuccess(this.loginForm.value);
+    if (logginSuccess) {
+      this.loginEmitter.emit();
+      return;
+    }
+    this.showAccessError = true;
   }
 }

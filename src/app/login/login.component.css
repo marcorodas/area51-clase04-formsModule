@@ -1,7 +1,8 @@
 form {
-	display: flex;
-	flex-direction: column;
-  width: 300px
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  margin: auto;
 }
 input {
 	padding: 5px 5px;
@@ -9,4 +10,12 @@ input {
 }
 button {
   margin-top: 5px;
+}
+.logo{
+  display:block; 
+  margin: auto;
+  width: 70%;
+}
+.recipe-book{
+  content:url(https://cdn2.iconfinder.com/data/icons/rounded_square_icons__books_by_deleket-dexzmr/320/Recipe_Book.png); 
 }

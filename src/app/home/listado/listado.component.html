@@ -4,7 +4,7 @@
   </div>
   <div class="panel-body">
     <div class="panel-group">
-      <span class="text-info" *ngIf="recetaService.recipeList.length == 0">
+      <span class="text-muted" *ngIf="recetaService.recipeList.length == 0">
         <i>Sin Recetas</i>
       </span>
 			<div class="panel panel-info" *ngFor="let item of recetaService.recipeList">

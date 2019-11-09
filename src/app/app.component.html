@@ -1,2 +1,2 @@
 <app-login *ngIf="!logginSuccess" (loginEmitter)="logginSuccess = true"></app-login>
-<app-home *ngIf="logginSuccess"></app-home>
+<app-home *ngIf="logginSuccess" (logoutEmitter)="logginSuccess = false"></app-home>

@@ -1,29 +1,5 @@
-form {
-  display: flex;
-  flex-direction: column;
+form{
   width: 330px;
-  margin: auto;
-}
-.form-field{
-  position: relative;
-}
-.form-field .glyphicon, .form-field .fa{
-  position: absolute;
-  padding: 10px 0px 0px 10px;
-  pointer-events: none;
-}
-.form-field input {
-	padding: 5px 5px;
-  width: 100%;  
-}
-.form-field>.glyphicon+input, .form-field>.fa+input{
-  padding-left: 30px;
-}
-.form-field ~ .form-field{
-  margin-top: 5px;
-}
-.form-field+button {
-  margin-top: 5px;
 }
 img.logo{
   display:block; 

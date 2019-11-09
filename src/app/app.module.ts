@@ -7,11 +7,14 @@ import { RegistroComponent } from './registro/registro.component';
 import { LoginComponent } from './login/login.component';
 import { UsuarioService } from './usuario.service';
 import { HomeComponent } from './home/home.component';
+import { RecetaService } from './receta.service';
+import { FormularioComponent } from './home/formulario/formulario.component';
+import { ListadoComponent } from './home/listado/listado.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, RegistroComponent, LoginComponent, HomeComponent ],
+  declarations: [ AppComponent, RegistroComponent, LoginComponent, HomeComponent, FormularioComponent, ListadoComponent ],
   bootstrap:    [ AppComponent ],
-  providers: [UsuarioService]
+  providers: [UsuarioService, RecetaService]
 })
 export class AppModule { }

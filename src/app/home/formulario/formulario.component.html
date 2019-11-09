@@ -1,0 +1,22 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <b class="panel-title">Receta</b>
+  </div>
+  <form class="panel-body" #recetaForm="ngForm">
+    <div class="form-field">
+      <label>Título</label>
+      <span class="text-danger" *ngIf="titulo.invalid && titulo.touched">
+        <i> *No puede estar vacío</i>
+      </span>
+      <input type="text" name="titulo" placeholder="Ingrese un título" required ngModel #titulo="ngModel" (keyup.enter)="onEnterTitulo(descripcionElem)">
+    </div>
+    <div class="form-field">
+      <label>Descripción</label>
+      <span class="text-danger" *ngIf="descripcion.invalid && descripcion.touched">
+        <i> *No puede estar vacío</i>
+      </span>
+      <textarea rows="5" name="descripcion" placeholder="Ingrese una descripción" required ngModel #descripcion="ngModel" #descripcionElem></textarea>
+    </div>
+    <button class="btn btn-primary" [disabled]="recetaForm.invalid" (click)="agregar(recetaForm)">Agregar</button>
+  </form>
+</div>

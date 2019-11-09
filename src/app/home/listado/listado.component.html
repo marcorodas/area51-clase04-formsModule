@@ -1,0 +1,16 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <b class="panel-title">Listado</b>
+  </div>
+  <div class="panel-body">
+    <div class="panel-group">
+      <span class="text-info" *ngIf="recetaService.recipeList.length == 0">
+        <i>Sin Recetas</i>
+      </span>
+			<div class="panel panel-info" *ngFor="let item of recetaService.recipeList">
+				<div class="panel-heading">{{item.titulo}}</div>
+				<div class="panel-body">{{item.descripcion}}</div>
+			</div>
+		</div>
+  </div>
+</div>

@@ -14,7 +14,7 @@ export class FormularioComponent {
   }
 
   agregar(recetaForm) {
-    this.recetaService.recipeList.push(recetaForm.value);
+    this.recetaService.recipeList.unshift(recetaForm.value);
     recetaForm.reset();
   }
 }

@@ -24,7 +24,7 @@ form {
 }
 .form-field input, .form-field textarea {
 	padding: 5px 5px;
-  width: 100%;  
+  width: 100%;
 }
 .form-field>.glyphicon+input, .form-field>.fa+input{
   padding-left: 30px;

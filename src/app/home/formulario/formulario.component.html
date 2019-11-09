@@ -5,17 +5,17 @@
   <form class="panel-body" #recetaForm="ngForm">
     <div class="form-field">
       <label>Título</label>
+      <input type="text" name="titulo" placeholder="Ingrese un título" required ngModel #tituloElem #titulo="ngModel" (keyup.enter)="onEnterTitulo(descripcionElem)">
       <span class="text-danger" *ngIf="titulo.invalid && titulo.touched">
         <i> *No puede estar vacío</i>
       </span>
-      <input type="text" name="titulo" placeholder="Ingrese un título" required ngModel #titulo="ngModel" (keyup.enter)="onEnterTitulo(descripcionElem)">
     </div>
     <div class="form-field">
       <label>Descripción</label>
+      <textarea rows="5" name="descripcion" placeholder="Ingrese una descripción" required ngModel #descripcion="ngModel" #descripcionElem></textarea>
       <span class="text-danger" *ngIf="descripcion.invalid && descripcion.touched">
         <i> *No puede estar vacío</i>
       </span>
-      <textarea rows="5" name="descripcion" placeholder="Ingrese una descripción" required ngModel #descripcion="ngModel" #descripcionElem></textarea>
     </div>
     <button class="btn btn-primary" [disabled]="recetaForm.invalid" (click)="agregar(recetaForm)">Agregar</button>
   </form>
